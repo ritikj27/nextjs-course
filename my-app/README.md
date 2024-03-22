@@ -1,4 +1,4 @@
-React server components
+## React server components
 
 -server comp
  && in nextjs all compoents are server compoents by deafult
@@ -8,28 +8,28 @@ React server components
  - to create client comp,its necessary to add "use client" at the top of component file
 
 
-#routing
+# routing
     &&** nextjs has a file system based routing mechanism
     &&** url paths that users can access in the brower are defined by files and folder in ur codebase .
 
 
-#Routing Conventions
+# Routing Conventions
     ** All routes must be placed inside the app folder
     ** Every file that corresponds to a route must be named page.js or page.tsx
     ** Every folder corresponds to a path segment in the browser URL
 
 
-#app folder
+# app folder
  #page.tsx -> home page
  #folfer -> page.tsx repsent new route
 
 
-#nested routes
+# nested routes
  /blogs
  /blogs/first
  /blogs/second
 
-#dyncamic routes
+# dyncamic routes
 /products
 /products/id
     #app folder
@@ -45,12 +45,12 @@ React server components
     }
 
 
-#nested dynamic routes
+# nested dynamic routes
 /product/id
 /product/1/review/1
 
 
-#catch-all segment
+# catch-all segment
 /docs/feature1/concept1
 /docs/feature2/concept2
 /docs/feature2/concept1
@@ -64,13 +64,13 @@ React server components
     ** to view without any slug (/docs) ([[...slug]])
 
 
-#not found page
+# not found page
     ** use app>not-found.tsx file
 
     ** there a one notFound() are aslo there
 
 
-#Private Folders
+# Private Folders
     ** A private folder indicates that it is a private implementation detail and should not be considered by the routing system
     T** he folder and all its subfolders are excluded from routing
     ** prefix the name with underscore
