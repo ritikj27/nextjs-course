@@ -9,6 +9,10 @@ export default function ReviewDetails({
     productid: string;
   };
 }) {
+  const id = 2;
+  if (id === 2) {
+    throw new Error("error in review page");
+  }
   if (parseInt(params.reviewId) > 100) {
     notFound();
   }

@@ -204,3 +204,10 @@ The immediate feedback reassures users that their action has been acknowledged, 
 2. Next.js allows the creation of shared layouts that remain interactive while new route segments are loading
 Users can continue interacting with certain parts of the application, such as a navigation menu or sidebar, even if the main content is still being fetched
 SL
+
+
+# error.tsx
+1. Automatically wrap a route segment and its nested children in a React Error Boundary
+2. Create error Ul tailored to specific segments using the file-system hierarchy to adjust granularity
+3. Isolate errors to affected segments while keeping the rest of the application functional
+4. Add functionality to attempt to recover from an error without a full page reload
