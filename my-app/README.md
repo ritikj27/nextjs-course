@@ -211,3 +211,26 @@ SL
 2. Create error Ul tailored to specific segments using the file-system hierarchy to adjust granularity
 3. Isolate errors to affected segments while keeping the rest of the application functional
 4. Add functionality to attempt to recover from an error without a full page reload
+
+
+# recovering error handle
+    "use client";
+
+    import React from "react";
+
+    export default function ErrorBoundary({
+    error,
+    reset,
+    }: {
+    error: Error;
+    reset: () => void;
+    }) {
+    return (
+        <div>
+        {error.message}
+        <div>
+            <button onClick={reset}>Try again!!</button>
+        </div>
+        </div>
+    );
+    }

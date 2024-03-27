@@ -9,7 +9,7 @@ export default function ReviewDetails({
     productid: string;
   };
 }) {
-  const id = 2;
+  const id = getRandomInt(2);
   if (id === 2) {
     throw new Error("error in review page");
   }
@@ -21,4 +21,7 @@ export default function ReviewDetails({
       ReviewDetails {params.reviewId} product {params.productid}
     </div>
   );
+}
+function getRandomInt(max: any) {
+  return Math.floor(Math.random() * Math.floor(max));
 }
