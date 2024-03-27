@@ -234,3 +234,51 @@ SL
         </div>
     );
     }
+
+
+# Handling Errors in Nested Routes
+* Errors bubble up to the closest parent error boundary
+* An error.tsx file will cater to errors for all its nested child segments
+* By positioning error.tsx files at different levels in the nested folders of a route, you can achieve a more granular level of error handling
+
+
+# Handling Errors in Layouts
+* An error.tsx file will handle errors for all its nested child segments
+* The error boundary does not catch errors thrown here because it's nested inside the layouts component
+
+
+# Parallel Routes
+* Parallel routes are an advanced routing mechanism that allows for the simultaneous rendering of multiple pages within the same layout
+
+
+# Parallel Routes contd.
+* Parallel routes in Next.js are defined using a feature known as slots
+* Slots help structure our content in a modular fashion
+* To define a slot, we use the @folder naming convention
+* Each slot is then passed as a prop to its corresponding 'layout.tsx' file.
+
+dashboard
+->header
+    user
+    notification
+    matrix
+->footer
+
+-> app
+    ->dasboard
+        -@user
+            page.tsx
+        -@notification
+            page.tsx
+        -@matrix
+            page.tsx
+
+
+# Parallel Routes Benefits
+* A clear benefit of parallel routes is their ability to split a single layout into various slots, making the code more manageable
+* Independent route handling
+
+
+# Sub-navigation in routes
+Each slot of your dashboard can essentially function as a mini-application, complete with its own navigation and state management
+This is especially useful in a complex application such as our dashboard where different sections serve distinct purposes.
