@@ -3,6 +3,7 @@
 
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
+import { useState } from "react";
 
 // export const metadata = {
 //   title: "Next.js",
@@ -20,10 +21,12 @@ export default function AuthLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const [input,setInput] = useState('')
   const pathName = usePathname();
   return (
     <>
       {children}
+      <input value={input} onChange={(e)=>setInput(e.target.value)}/>
       <h1 style={{ backgroundColor: "gold" }}>auth</h1>
       {navigation.map((nav) => {
         const isActive = pathName.startsWith(nav.href);
