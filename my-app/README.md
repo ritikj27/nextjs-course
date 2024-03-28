@@ -282,3 +282,37 @@ dashboard
 # Sub-navigation in routes
 Each slot of your dashboard can essentially function as a mini-application, complete with its own navigation and state management
 This is especially useful in a complex application such as our dashboard where different sections serve distinct purposes.
+
+
+# Unmatched Routes
+* Navigation from the Ul
+* In the case of navigation within the UI, Next.js retains the previously active state of a slot regardless of changes in the URL.
+* Page reload
+
+* Next.js immediately searches for a default.tsx file within each unmatched slot
+The presence of this file is critical, as it provides the default content that Next.js will render in the user interface
+* If this default.tsx file is missing in any of the unmatched slots for the current route Next.js will render a 404 error.
+
+
+# Intercepting Routes
+Intercepting routes allow you to intercept or stop the default routing behaviour to present an alternate view or component when navigating through the UI, while still preserving the intended route for scenarios like page reloads
+This can be useful if you want to show a route while keeping the context of the current page
+
+
+exmple
+=>dashboard on local3000 and it has login button
+=>when user click on login button it will open model with local3000/login
+=>it aslo shareable
+
+
+exmple
+=>phtos app on local3000/phtos and it has click button
+=>when user click on view button it will open model with local3000/phtos/[id]
+=>it aslo shareable
+
+
+# Intercepting Routes Conventions
+(.) to match segments on the same level
+(..) to match segments one level above
+(..)(..) to match segments two levels above
+(...) to match segments from the root app directory
