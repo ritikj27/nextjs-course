@@ -316,3 +316,12 @@ exmple
 (..) to match segments one level above
 (..)(..) to match segments two levels above
 (...) to match segments from the root app directory
+
+
+# Route Handlers
+1) We've learnt how to route to pages
+2) We can also create custom request handlers for our routes using a feature called route handlers
+3) Unlike page routes, which respond with HTML content, route handlers allow you to create RESTful endpoints, giving you full control over the response
+4) There is no overhead of having to create and configure a separate server
+5) Route handlers are also great for making external API requests
+6) Route handlers run server-side, ensuring that sensitive information like private keys remains secure and never gets shipped to the browser
