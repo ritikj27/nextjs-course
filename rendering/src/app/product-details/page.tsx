@@ -10,7 +10,7 @@ export default function ProductDetails() {
         <Product />
       </Suspense>
       <Suspense fallback="Loading... ">
-      <Reviews />
+        <Reviews />
       </Suspense>
 
     </div>
